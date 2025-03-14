@@ -15,8 +15,8 @@ def main():
     logger.info("Started")
     observer = Observer()
     event_handler = LoggingEventHandler()
-    path = "."
-    observer.schedule(event_handler, path)
+    path = "C:"
+    observer.schedule(event_handler, path, recursive=True)
     observer.start()
     try:
         while observer.is_alive():
